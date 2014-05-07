@@ -1,74 +1,70 @@
 @import "bourbon";
 
+// UNIVERSAL SELECTORS
 .body {
  	font-family: 'Roboto', sans-serif;
-
 }
 
 .relative {
-  	margin: 0px auto;
   	height: 250px;
+  	margin: 0px auto;
   	margin: 15;
   	padding: 15;
- 	background-color: #f5f5f5;	
+	font-size: 19px;
  	border-radius: 10px 10px;
  	border: 3px solid #555555;
  	background-color: #E6EAEB;
-	font-size: 19px
  }
-  
+ 
+// HEADER  
 .moonwalk {
  	height: 500px;
- 	background-image: url("http://d24w6bsrhbeh9d.cloudfront.net/photo/aWZbY32_460sa.gif") ;
- 	background-size: cover;
  	border-top: 3px solid #555555;
  	border-right: 3px solid #555555;
  	border-left: 3px solid #555555;
+ 	background-image: url("http://d24w6bsrhbeh9d.cloudfront.net/photo/aWZbY32_460sa.gif") ;
+ 	background-size: cover;
 }	
 
 .header {
  	height: 70px;
- 	margin: 0;
- 	padding: 0;
 }
  
 .headliner {
 	height: 70px;
-	line-height: 70px;
  	width: auto;
-	margin: 0 auto;
- 	padding: 0;
- 	font-size: 40px;
- 	text-align: center;
  	color: #f5f5f5;
- 	background-color: #cd1713;
+ 	text-align: center;
+ 	font-size: 40px;
+	line-height: 70px;
+ 	padding: 0;
+	margin: 0 auto;
  	border-radius: 0px 0px 10px 10px;
 	border-bottom: 3px solid #555555;
 	border-left: 3px solid #555555;
 	border-right: 3px solid #555555;
-
+ 	background-color: #cd1713;
  }
  
  .headliner:hover {
- 	-moz-box-shadow: 0px 0px 100px 0px #ffffff;
- 	-webkit-box-shadow: 0px 0px 100px 0px #ffffff;
- 	box-shadow: 0px 0px 100px 0px #ffffff;
  	text-shadow: 0px 0px 100px #ffffff;
  	transition: 0.5s ease;
  }
 
+// THE START OF NUMBERED BOXES
+// WARNING BOX
 .warning {
 	height: 50px;
 	width: 165px;
-	line-height: 50px;
-	border-radius: 5px;
-	border: 2px solid #000000;
-	background-color: #ffd700;
 	color: #000000;
 	font-size: 30px;
 	text-align: left;
+	line-height: 50px;
 	padding-left: 10px;
 	margin: 10px 0px 20px 10px;
+	border-radius: 5px;
+	border: 2px solid #000000;
+	background-color: #ffd700;
 }
 
 .warning:hover {
@@ -77,16 +73,17 @@
 	transition: -0.3s ease;
 }
 
+// CHRISTMAS BOX
 .christmas {
-	background-image: url("http://24.media.tumblr.com/ffcd709005e24ce9e4660f39c85faada/tumblr_mx5x9gAF6T1t22th1o1_1280.gif") ;
-	background-size: cover;
-	width: 240px;
 	height: 90px;
+	width: 240px;
 	color: #008000;
 	text-align: center;
 	font-size: 15px;
 	line-height: 15px;
 	margin: 10px 0px 20px 10px;
+	background-image: url("http://24.media.tumblr.com/ffcd709005e24ce9e4660f39c85faada/tumblr_mx5x9gAF6T1t22th1o1_1280.gif") ;
+	background-size: cover;
 }
 
 .christmas:hover {
@@ -96,18 +93,19 @@
 	transition: 1.5s ease;
 }
 
+// CLICK BUTTON BOX
 .click {
 	height: 45px;
-	line-height: 45px;
 	width: 45px;
 	color: #ffffff;
-	background-color: #0000cd;
+	font-size: 15px;
+	text-align: center;
+	line-height: 45px;
 	border: 2px solid #000080;
 	border-radius: 100%;
 	margin: 10px 0px 20px 10px;
-	text-align: center;
-	font-size: 15px;
-	transition: 0.4s ease;
+	background-color: #0000cd;
+	@include transition (all 0.4s ease);
 }
 
 .click:hover {
@@ -116,24 +114,25 @@
 
 .click:active {
 	height: 45px;
-	line-height: 45px;
 	width: 45px;
 	color: #ffffff;
-	background-color: #4169E1;
+	line-height: 45px;
 	border: 2px solid #000080;
 	border-radius: 100%;
+	background-color: #4169E1;
 }
 
+// HIDDEN MESSAGE BOX
 .skinny p {
- 	width: 150px;
 	height: 25px;
+ 	width: 150px;
 	font-size: 17px;
 	line-height: 25px;
-	border-radius: 5px 5px 1px 1px;
-	background-color: #2A7E9C;
 	text-align: center;
 	padding: 0;
 	margin: 0px 0px 20px 0px;
+	border-radius: 5px 5px 1px 1px;
+	background-color: #2A7E9C;
 }
 
 .skinny:hover {
@@ -141,109 +140,114 @@
 }
 
 .skinny:active {
-	width: 150px;
 	height: 130px;
-	background-color: #ffffff;
+	width: 150px;
 	color: #ffffff;
+	text-shadow: 0px 0px 2px #246C85;
+	margin-bottom: 10px;
 	border: 1px solid #2A7E9C;
 	border-radius: 7px 7px 1px 1px;
-	margin-bottom: 10px;
-	text-shadow: 0px 0px 2px #246C85;
+	background-color: #ffffff;
 }
 
+// PUMP UP THE VOLUME BOX
 .volume {
-	background-image: url("http://www.crazymonkeydefense.com/wp-content/uploads/2014/03/black-hd-background-background-wallpapers-abstract-photo-cool-black-background.jpg") ;
-	background-size: cover;
-	width: 240px;
 	height: 90px;
-	line-height: 90px;
+	width: 240px;
 	font-size: 30px;
 	text-align: center;
+	line-height: 90px;
+	margin: 20px 0px 20px 0px;
 	border: 3px solid #000000;
 	border-radius: 5px 5px 5px 5px;
-	margin: 20px 0px 20px 0px;
+	background-image: url("http://www.crazymonkeydefense.com/wp-content/uploads/2014/03/black-hd-background-background-wallpapers-abstract-photo-cool-black-background.jpg") ;
+	background-size: cover;
 }
 
 .volume a {
 	color: #ADFF2F;
-	text-decoration: none;
 	font-family: Helvetica;
+	text-decoration: none;
 	text-shadow: 0px 0px 5px #008000;
 }
 
 .volume:hover {
-	background-image: url("http://stream1.gifsoup.com/view3/1261616/volume-meter-o.gif") ;
-	background-size: cover;
-	width: 240px;
 	height: 90px;
+	width: 240px;
 	font-size: 45px;
 	line-height: 90px;
 	text-align: center;
-	transition: 1s ease;
+	background-image: url("http://stream1.gifsoup.com/view3/1261616/volume-meter-o.gif") ;
+	background-size: cover;
+	@include transition (all 1s ease);
 }
 
+// 5 ITEM HORIZONTAL MENU BOXES
 .menu div {
 	margin-bottom: 30px;
 }
 
 .menu {
-	list-style: none;
-	width: 300px;
-	height: 30px;
-	background: #000000;
-	border: 1px solid #222222;
-	padding: 0;
-	display: inline-block;
-	float: left;
 	position: relative;	
+	display: inline-block;
+	height: 60px;
+	width: 500px;
+	float: left;
+	list-style: none;
+	border: 1px solid #222222;
+	background: #000000;
 }
 
 .menu li {
-	height: 30px;
-	width: 60px;
 	float: left;
+	height: 60px;
+	width: 100px;
 }
 
 .menu li a {
+	float: left;
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: center;
 	text-decoration: none;
 	color: #ffffff;
-	margin: 0 auto;
-	text-align: center;
-	font-size: 15px;
-	float: left;
-	margin: 5px 0px 0px 5px;
+	padding: 2;
+	margin: 5px 0px 0px 0px;
 }
 
 .menu li a:hover {
+	color: #000000;
+	height: 52px;
+	width: 75px;
+	text-align: center;
+	padding-top: 2px;
+	border-radius: 5px 0px 0px 0px;
 	background-color: #FFFF00;
 	background-size: cover;
-	border-radius: 5px 0px 0px 0px;
-	color: #000000;
-	height: 29px;
-	text-align: center;
 }
 
 .menu p {
 	padding-top: 40px;
 }
 
+// CANDY BOX
 .picture-container {
 	height: 410px;
 	width: auto;
 }
 	
 .picture {
-	width: 60px;
 	height: 60px;
+	width: 60px;
+	margin-bottom: 20px;
 	border-radius: 100%;
 	background-image: url("http://www.clker.com/cliparts/8/7/c/4/1224784889408279301bluefrog23_Peppermint_Candy.svg.med.png") ;
 	background-size: cover;
-	margin-bottom: 20px;
 }
 
 .picture:hover {
-	width: 350px;
 	height: 350px;
+	width: 350px;
 	border: 2px solid #555555;
 	border-radius: 100%;
 	background-image: url("http://www.clker.com/cliparts/8/7/c/4/1224784889408279301bluefrog23_Peppermint_Candy.svg.med.png") ;
@@ -252,129 +256,110 @@
 }
 
 .picture:active {
-	width: 350px;
 	height: 350px;
-	border: 2px solid #555555;
+	width: 350px;
 	border-radius: 100%;
+	border: 2px solid #555555;
 	background-image: url("http://www.clker.com/cliparts/8/7/c/4/1224784889408279301bluefrog23_Peppermint_Candy.svg.med.png") ;
 	background-size: cover;
 	transition: 5s ease;
 }
 
-.menu-length {
+// 5 ITEM VERTICAL MENU BOXES
+.big-menu {
 	height: 300px;
 	width: auto;
+	
+	& a {
+		color: #ffffff;
+		margin-left: 10px;
+		text-align: center;
+		line-height: 40px;
+		font-family: sans-serif;
+		letter-spacing: 0.9px;
+		text-decoration: none;
+		text-shadow: 0px 0px 1px #56152D;
+	}
+
 }
-
-
+	
 .first {
 	border-radius: 8px 0px 0px 0px;
-	border: 1px solid #56152D;
-}
-
-.expand {
-	width: 115px;
-	height: 40px;
-	background-color: #882148;
-	border-bottom: 1px solid #56152D;
-	border-right: 1px solid #56152D;
-	border-left: 1px solid #56152D;
-	margin: 0;
-	font-size: 16px;
-}
-
-.expand a {
-	margin-left: 10px;
-	text-align: center;
-	text-decoration: none;
-	line-height: 40px;
-	color: #ffffff;
-	text-shadow: 0px 0px 2px #C6B0B9;
 }
 
 .last {
+	margin-bottom: 20px;
 	border-radius: 0px 0px 0px 8px;
-	border-bottom: 1px solid #56152D;
-	border-right: 1px solid #56152D;
-	border-left: 1px solid #56152D;
-	margin-bottom: 20px;
+	border: 0px 1px 1px 1px solid #56152D;
 }
 
-.expand:hover {
+
+.expand {
+	height: 40px;
+	width: 120px;
+	margin: 0;
+	font-size: 16px;
+	border: 1px solid #56152D;
 	background: #BB2D64;
-	height: 47px;
-	width: 350px;
-	border: 2px solid #56152D;
-	transition: 0.5s ease;
+
+	&:hover {
+		height: 47px;
+		width: 350px;
+		border: 2px solid #56152D;
+		@include transition (all 0.5s ease);	
+	}	
 }
 
-.normal {
-	-moz-box-shadow: 0px 15px 0px 0px #08363B;
-	-webkit-box-shadow: 0px 15px 0px 0px #08363B;
-	box-shadow: 0px 15px 0px 0px #08363B;
-}
+// THREE CLICKABLE BUTTONS
+.long-menu {
+	height: 300px;
+	width: auto;
 
-.select {
-	-moz-box-shadow: 0px 15px 0px 0px #08363B;
-	-webkit-box-shadow: 0px 15px 0px 0px #08363B;
-	box-shadow: 0px 15px 0px 0px #08363B;
-}
-
-.press {
-	-moz-box-shadow: 0px 15px 0px 0px #08363B;
-	-webkit-box-shadow: 0px 15px 0px 0px #08363B;
-	box-shadow: 0px 15px 0px 0px #08363B;
-}
-
-.test {
-	width: 110px;
+.buttons {
+	display: inline-block;
 	height: 50px;
-	line-height: 50px;
-	background-color: #004D56;
-	border: 2px solid #08363B;
-	border-radius: 5px;
+	width: 110px;
+	text-align: center;
 	font-size: 22px;
-	margin-bottom: 20px;
-	text-align: center;
-}
-
-.test a {
-	text-align: center;
-	text-decoration: none;
-	color: #ffffff;
-	text-shadow: 0px 0px 2px #00A8BB;
-}
-
-.select:hover {
-	background: #004D56;
-	height: 53px;
-	line-height: 53px;
-	width: 110px;
-	border: 2px solid #08363B;
-	-moz-box-shadow: 0px 12px 0px 0px #08363B;
-	-webkit-box-shadow: 0px 12px 0px 0px #08363B;
+	border-radius: 5px;
+	line-height: 50px;
 	box-shadow: 0px 12px 0px 0px #08363B;
-	transition: 0.1s ease;
+	border: 2px solid #08363B;
+	background-color: #004D56;
+	@include transition (all 0.1s ease);
+
+	& a {
+		color: #ffffff;
+		text-align: center;
+		text-decoration: none;
+		font-family: sans-serif;
+		letter-spacing: 0.9px;
+		text-shadow: 0px 0px 1px #08363B;
+		margin-left: 0;
+	}
+
+	&:hover {
+		height: 53px;
+		line-height: 53px;
+		box-shadow: 0px 9px 0px 0px #08363B;
+	}
+
+	&:active {
+		height: 60px;
+		line-height: 60px;
+		box-shadow: 0px 3px 0px 0px #08363B;
+	} 
 }
 
-.press:active {
-	background: #004D56;
-	height: 60px;
-	line-height: 60px;
-	width: 110px;
-	border: 2px solid #08363B;
-	transition: 0.5s ease;
-	-moz-box-shadow: 0px 4px 0px 0px #08363B;
-	-webkit-box-shadow: 0px 4px 0px 0px #08363B;
-	box-shadow: 0px 4px 0px 0px #08363B;
-	transition: 0.1s ease;
+// KEYBORD KEYS BOX
+.left, .down, .right {
+	display: inline-block;
+	box-shadow: 4px 9px 4px 0px #757575;
 }
 
 .up {
 	margin-left: 96px;
 	margin-bottom: 3px;
-	-moz-box-shadow: 4px 9px 4px 0px #757575;
-	-webkit-box-shadow: 4px 9px 4px 0px #757575;
 	box-shadow: 4px 9px 4px 0px #757575;
 }
 
@@ -382,33 +367,12 @@
 	margin-left: 30px;
 }
 
-.left {
-	display: inline-block;
-	-moz-box-shadow: 4px 9px 4px 0px #757575;
-	-webkit-box-shadow: 4px 9px 4px 0px #757575;
-	box-shadow: 4px 9px 4px 0px #757575;
-}
-
 .left a {
 	margin-left: 31px;
 }
 
-.down {
-	display: inline-block;
-	-moz-box-shadow: 4px 9px 4px 0px #757575;
-	-webkit-box-shadow: 4px 9px 4px 0px #757575;
-	box-shadow: 4px 9px 4px 0px #757575;
-}
-
 .down a {
 	margin-left: 15px;
-}
-
-.right {
-	display: inline-block;
-	-moz-box-shadow: 4px 9px 4px 0px #757575;
-	-webkit-box-shadow: 4px 9px 4px 0px #757575;
-	box-shadow: 4px 9px 4px 0px #757575;
 }
 
 .right a {
@@ -416,111 +380,96 @@
 }
 
 .button {
-	width: 85px;
 	height: 40px;
-	line-height: 40px;
-	background-color: #999895;
-	border: 4px solid #A4A4A4;
-	border-radius: 5px;
-	font-size: 22px;
+	width: 85px;
 	margin-bottom: 4px;
+	line-height: 40px;
+	font-size: 22px;
+	border-radius: 5px;
+	border: 4px solid #A4A4A4;
+	background-color: #999895;
 }
 
 .button a {
+	color: #343433;
 	text-align: center;
 	text-decoration: none;
-	color: #343433;
 	text-shadow: 0px 0px 4px #A4A4A4;
 }
 
 .button:hover {
-	background: #999895;
 	height: 43px;
-	line-height: 43px;
 	width: 85px;
-	border: 4px solid #A4A4A4;
-	-moz-box-shadow: 1px 4px 4px 0px #757575;
-	-webkit-box-shadow: 1px 4px 4px 0px #757575;
+	line-height: 43px;
 	box-shadow: 1px 4px 4px 0px #757575;
-	transition: 0.1s ease;
+	border: 4px solid #A4A4A4;
+	background: #999895;
+	@include transition (all 0.1s ease);
 }
 
-.short {
-	width: 80px;
-	height: 50px;
-	background-color: #000000;
-	margin-top: 60px;
-}
-
-.short:hover {
-	background: orange;
-	height: 50px;
-	width: 500px;
-}
-
-
-
+// SUNSHINE BOX
 .sunny-day {
 	height: 590px;
 }
 
 .sunshine {
-	text-align: center;
-	border-radius: 4px;
-	border: 10px #0B2250;
-	text-shadow: 0px 0px 50px #ffffff;
-	background-color: #194CB6;
-	color: #ffd700;
-	width: 600px;
 	height: 150px;
-	line-height: 44px;
-	font-size: 30px;
+	width: 600px;
 	margin-top: 5px;
+	color: #ffd700;
+	text-shadow: 0px 0px 50px #ffffff;
+	text-align: center;
+	font-size: 30px;
+	line-height: 44px;
+	border: 10px #0B2250;
+	border-radius: 4px;
+	background-color: #194CB6;
 }
 
 .sunshine:hover {
-	text-align: center;
-	line-height: 100px;
-	font-size: 100px;
 	height: 500px;
 	width: 960px;
 	color: #ffffff;
+	font-size: 100px;
+	text-align: center;
+	line-height: 100px;
 	border-radius: 4px;
+	border: 1px solid black;
+	border: 2px solid #000000;
 	background-image: url("http://i.stack.imgur.com/V3plu.gif") ;
 	background-size: cover;
-	border: 1px solid black;
-	transition: 4s ease;
-	border: 2px solid #000000;
+	@include transition (all 1s ease);
 }
 
 .sun {
 	display: block;
 	position: relative;
 	height: 45px;
-	line-height: 45px;
 	width: 45px;
-	background-color: #ffd700;
-	border: 4px dashed #DAA520;
-	border-radius: 100%;
+	line-height: 45px;
 	margin-left: 15px;
+	border-radius: 100%;
+	border: 4px dashed #DAA520;
+	background-color: #ffd700;
 	box-shadow: 0px 0px 90px #ffffff;
 }
 
 .sunshine p {
-	color: #000000;
-	font-size: 18px;
-	line-height: 18px;
-	padding-top: 40px;
 	text-align: left;
+	padding-top: 40px;
+	line-height: 18px;
+	font-size: 18px;
+	color: #000000;
 }
 
+// ANCHORMAN BOX
 .anchorman {
 	height: 400px;
 	width: auto;
-	font-size: 250px;
-	text-align: top-left;
 	padding-left: 90px;
 	line-height: 0px;
+	text-align: top-left;
+	font-size: 250px;
 	color: #f5f5f5;
 	text-shadow: 0px 0px 10px #000000;
 	padding-bottom: 50px;
@@ -528,22 +477,23 @@
 }
 
 .anchorman:hover {
-	margin: 10px;
-	width: auto;
 	height: 500px;
+	width: auto;
+	margin: 10px;
 	background-image: url("http://a.fod4.com/misc/tumblr_lkygpcv5i01qcz3y4.gif") ;
 	background-size: cover;
-	transition: 3s ease;
+	@include transition (all 3s ease);
 }
 
+// CRAZY ACTOR BOX
 .crazy {
 	height: 775px;
 	width: auto;	
 }
 	
 .eyes {
-	width: 175px;
 	height: 175px;
+	width: 175px;
 	border: 7px dashed #cd1713;
 	border-radius: 5px;
 	background-image: url("http://images.sodahead.com/polls/000604547/polls_bc1ff5fcbf7e760667b2870b154966d7_poll_xlarge.jpeg") ;
@@ -553,125 +503,132 @@
 }
 
 .eyes:hover {
-	width: 650px;
 	height: 650px;
+	width: 650px;
+	padding: 10;
 	border: 2px solid #555555;
 	border-radius: 100%;
 	background-image: url("http://reactiongifs.me/wp-content/uploads/2013/11/the-smile-man-willen-dafoe-creepy.gif") ;
 	background-size: cover;
-	transition: 3s ease;
-	padding: 10;
+	@include transition (all 3s ease);
 }
 
+// CIRCLE BOXES
 .square {
-	width: 100px;
 	height: 100px;
-	background-color: #004D56;
+	width: 100px;
 	border: 2px solid #08363B;
+	background-color: #004D56;
 }
 
 .square:hover {
-	background: #004D56;
-	border: 2px solid #08363B;
 	height: 100px;
 	width: 100px;
+	border: 2px solid #08363B;
 	border-radius: 100%;
-	transition: 0.9s ease;
+	background: #004D56;
+	@include transition (all 0.9s ease);
 }
 
+// CIRCLE BOXES
 .circle {
-	width: 150px;
 	height: 150px;
-	background-color: #004D56;
+	width: 150px;
 	border-radius: 100%;
-
+	background-color: #004D56;
 }
 
 .circle:hover {
-	background: #004D56;
 	height: 150px;
 	width: 150px;
 	border-radius: 0%;
-	transition: 0.5s ease;
+	background: #004D56;
+	@include transition (all 0.5s ease);
 }
 
+// RECTANGLE BOXES 
 .rectangle {
-	width: 75px;
 	height: 75px;
-	background-color: #004D56;
+	width: 75px;
 	border: 2px solid #08363B;
+	background-color: #004D56;
 }
 
 .rectangle:hover {
-	background: #004D56;
 	height: 150px;
 	width: 600px;
-	transition: 0.7s ease;
+	background: #004D56;
+	@include transition (all 0.7s ease);
 }
 
+// TRIANGLE BOXES
 .triangle:hover {
-	width: 0px;
 	height: 0px;
-	background-color: #E6EAEB;
+	width: 0px;
 	border-top: 75px solid #E6EAEB;
 	border-right: 75px solid #E6EAEB;
 	border-bottom: 75px solid #004D56;
 	border-left: 75px solid #E6EAEB;
-	transition: 0.7s ease;
+	background-color: #E6EAEB;
+	@include transition (all 0.7s ease);
 }
 
 .one {
-	width: 0px;
 	height: 0px;
-	background-color: #E6EAEB;
+	width: 0px;
+	margin-bottom: 25px;
 	border-top: 50px solid #E6EAEB;
 	border-right: 50px solid #E6EAEB;
 	border-bottom: 50px solid #08363B;
 	border-left: 50px solid #E6EAEB;
-	transition: 0.7s ease;
-	margin-bottom: 25px;
+	background-color: #E6EAEB;
+	@include transition (all 0.7s ease);
 }
 
 .two {
-	width: 75px;
 	height: 75px;
-	background-color: #004D56;
-	border-radius: 100%	;
-	transition: 0.7s ease;
+	width: 75px;
 	padding-bottom: 60px;
+	border-radius: 100%	;
+	background-color: #004D56;
+	@include transition (all 0.7s ease);
 }
 
+// PIZZA BOX
+.pizza {
+	height: 270px;
+	width: auto;
+}
+
+// THE BELOW CODE IS NOT MINE
 .box1 {
-  width:200px;
-  height:200px;
-  background:rgba(255,0,0,0.5);
-  position:absolute;
-  left:50%;
-  margin-left:-100px;
-  margin-bottom: 330px;
+	position:absolute;
+	left:50%;
+	height:200px;
+	width:200px;
+	margin-left:-100px;
+	margin-bottom: 330px;
+	background:rgba(255,0,0,0.5);
 }
 
 .box2 {
-  width:200px;
-  height:200px;
-  background:rgba(0,0,255,0.5);
-  position:absolute;
-  left:90%;
-  margin-left:-100px;
+	position:absolute;
+	left:90%;
+	height:200px;
+	width:200px;
+	margin-left:-100px;
+	background:rgba(0,0,255,0.5);
 }
 
 @-webkit-keyframes movingbox {
-  0%{left:90%;}
-  50%{left:10%;}
-  100%{left:90%;}
+ 	0%{left:90%;}
+ 	50%{left:10%;}
+ 	100%{left:90%;}
 }
 
 .box2{
-  -webkit-animation:movingbox 5s infinite;
+ 	-webkit-animation:movingbox 5s infinite;
 }
-
-
-$wow: blue;
 
 @mixin biscuits-and-gravy($radius) {
 	-webkit-border-radius: $radius;
@@ -680,19 +637,3 @@ $wow: blue;
 	-ie-border-radius: $radius;
 	border-radius: $radius;
 }
-
-.awesome {
-	background: $wow;
-	height: 45px;
-	width: 70px;
-}
-
-
-
-
-
-
-
-
-
-
